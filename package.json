@@ -1,6 +1,7 @@
 {
   "name": "visionflow",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@fullcalendar/daygrid": "^6.1.15",
