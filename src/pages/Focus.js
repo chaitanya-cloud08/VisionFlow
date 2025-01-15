@@ -86,7 +86,7 @@ export default function Focus() {
           <p className='text-white text-xl font-bold text-center'>{quote}</p>
         </div>
       </div>
-      <div className='flex-grow border-2 border-black flex flex-col md:flex-row items-center justify-start' style={{ height: 'calc(100vh - 16rem)' }}>
+      <div className='flex-grow  flex flex-col md:flex-row items-center justify-start' style={{ height: 'calc(100vh - 16rem)' }}>
         <div className='music-frame-wrapper flex items-end justify-center h-full w-full md:h-full md:w-3/12 mb-0'>
           {isIframeVisible && (
             <div id="embed-iframe">
@@ -94,9 +94,9 @@ export default function Focus() {
             </div>
           )}
         </div>
-        <div className='bg-wrapper border-2 border-orange-400 flex flex-col items-center justify-start  w-full md:w-2/4 h-3/4  md:mt-2 transform scale-50 md:scale-100'>
+        <div className='bg-wrapper flex flex-col items-center justify-start  w-full md:w-2/4 h-3/4  md:mt-2 transform scale-50 md:scale-100'>
           
-          <div className="blur-container backdrop-blur-sm md:p-4 rounded-2xl border-2 border-pink-500 ">
+          <div className="blur-container backdrop-blur-sm md:p-4 rounded-2xl ">
             <PomodoroTimer />
           </div>
         </div>
