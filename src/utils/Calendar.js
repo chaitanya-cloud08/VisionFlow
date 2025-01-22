@@ -70,7 +70,7 @@ const Calendar = () => {
   };
 
   return (
-    <div className="p-4 bg-inherit rounded-lg shadow-md h-full w-full flex items-start justify-center flex-col text-white text-xl" style={{ transform: 'scale(0.7)' }}>
+    <div className="p-1 md:p-4 bg-inherit rounded-lg shadow-md h-3/12 ml-2  md:h-full w-1/2 md:w-full flex items-start justify-center flex-col text-white text-xl" style={{ transform: 'scale(0.7)' }}>
       <FullCalendar
         plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"

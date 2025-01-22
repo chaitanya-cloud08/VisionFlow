@@ -42,7 +42,7 @@ function MainPage() {
       style={{ backgroundImage: "url('/assets/images/visionflowbg.jpeg')" }}
     >
       <Navbar />
-      <div id="home" className="text-center space-y-3 mb-7 ">
+      <div id="home" className="text-center space-y-3 mb-7 py-4 ">
         <h1 className="text-purple text-center text-4xl font-bold">
           Where Minimalism meets <br />
           Meaningful Progress
@@ -51,7 +51,7 @@ function MainPage() {
           VisionFlow is a serene, purpose-driven workspace <br /> designed to harmonize focus and productivity.
         </p>
         <button
-          className="bg-purple hover:bg-violet-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-purple hover:bg-violet-700 text-white font-bold py-2 px-4 rounded my-4"
           onClick={handleGoToDashboard} 
         >
           Go to Dashboard
@@ -71,9 +71,9 @@ function MainPage() {
       <div
       className={`switching ${
         isFocusMode ? "bg-white text-purple" : "bg-purple text-white"
-      } flex flex-col items-center justify-evenly p-8 transition-all duration-500 space-y-2 `} id='switch'
-    >        <h1 className="text-4xl font-extrabold ">Flip the Switch</h1>
-        <p className="text-2xl font-bold mt-0">
+      } flex flex-col items-center justify-evenly p-8 transition-all duration-500`} id='switch'
+    >        <h1 className="text-5xl font-extrabold ">Flip the Switch</h1>
+        <p className="text-3xl font-bold my-4 text-center ">
           Try VisionFlow's exclusive Focus Mode and Ambient Mode for yourself
         </p>
         <button onClick={handleSwitchMode} className="transition-transform duration-300 hover:scale-105">
@@ -84,7 +84,7 @@ function MainPage() {
               : "/assets/images/switch-off-pink.png"
           } 
           alt="Switch Mode"
-          
+          className='h-10 w-10 mb-4'
         />
       </button>
           
@@ -174,7 +174,7 @@ function MainPage() {
   </div>
 </div>
 
-<div className='copyright-banner bg-white w-full h-auto mt-10'>
+<div className='copyright-banner  w-full h-auto mt-10'>
 <h1 className='text-purple font-bold text-lg text-center p-4'>© 2025 Chaitanya Behl All Rights Reserved</h1>
 </div>
 

@@ -56,10 +56,10 @@ export default function PomodoroTimer() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-3/4 text-white">
+    <div className="flex flex-col items-center justify-center h-3/4 text-white -mt-40 md:mt-0">
       {/* Task Input and Display */}
       {!showTask ? (
-        <div className="text-2xl">
+        <div className="md:text-2xl text-3xl">
            <div className="blur-container backdrop-blur-sm p-4 rounded-xl mb-4">
           <input
             type="text"
@@ -77,7 +77,7 @@ export default function PomodoroTimer() {
           </div>
         </div>
       ) : (
-        <div className="mb-4text-2xl">
+        <div className="mb-4 text-3xl  md:text-2xl">
           <p className="font-bold text-3xl">{task}</p>
         </div>
       )}
@@ -86,7 +86,7 @@ export default function PomodoroTimer() {
       <div className="text-6xl font-bold mb-6">{formatTime(time)}</div>
 
       {/* Controls */}
-      <div className="flex gap-4 mb-6">
+      <div className="flex gap-4 mb-6 text-xl">
         <button
           className={`px-4 py-2 rounded-lg ${mode === "Pomodoro" ? "bg-purple" : "bg-none"}`}
           onClick={() => handleModeChange("Pomodoro")}
@@ -116,7 +116,7 @@ export default function PomodoroTimer() {
       </button>
 
       {/* Custom Timer Inputs */}
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex flex-col items-center gap-4 text-xl">
         <div className="flex gap-2 items-center">
           <label>Pomodoro Time (minutes):</label>
           <input

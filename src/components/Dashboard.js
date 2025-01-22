@@ -78,8 +78,8 @@ export default function Dashboard() {
 
   return (
     <div className='backdrop-blur-3xl bg-gradient-to-r from-violet-400 to-pink-300 flex flex-col h-screen border-none shadow-lg overflow-hidden' style={{ backgroundImage: bgImage, backgroundSize: 'cover', backgroundPosition: 'center' }} > 
-      <div className='top w-full h-32 flex flex-col items-center justify-between p-0.5 md:flex-row'>
-        <div className='logo pl-4'>
+      <div className='top w-full h-32 flex flex-col items-center justify-between py-4 md:p-0.5  md:flex-row'>
+        <div className='logo pl-4 mb-2'>
         <h1 className='font-lobster text-white text-4xl cursor-pointer' onClick={handleGoToHomepage}>VisionFlow</h1> 
         </div>
         <div className='mot-quote-generator pr-4'>
@@ -87,16 +87,10 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className='flex-grow flex flex-col md:flex-row '>
-        <div className='music-frame-wrapper flex items-end justify-center h-full w-full md:h-full md:w-3/12 mb-0'>
-          {isIframeVisible && (
-            <div id="embed-iframe">
-              <SpotifyPlayer />
-            </div>
-          )}
-        </div>
-        
-        <div className='bg-wrapper flex flex-col items-center justify-center h-full w-full md:w-2/4 md:h-full p-0'>
+
+
+
+<div className='bg-wrapper flex flex-col md:flex-row items-center justify-center h-full w-full md:w-2/4 md:h-full p-0  md:-ml-20 '>
         <div className="blur-container backdrop-blur-sm p-4 rounded-3xl ">
 
 
@@ -109,6 +103,16 @@ export default function Dashboard() {
         </div>
         </div>
 
+      <div className='flex-grow flex flex-col md:flex-row '>
+        <div className='music-frame-wrapper flex items-end justify-center h-full w-full md:h-full md:w-3/12 mb-0'>
+          {isIframeVisible && (
+            <div id="embed-iframe">
+              <SpotifyPlayer />
+            </div>
+          )}
+        </div>
+        
+        
         <div
           className={`slider absolute top-0 right-0 h-5/6 w-full md:w-2/4 bg-gray-800 text-white p-4 transition-transform duration-1000 ease-in-out ${isSliderVisible ? 'transform-none' : 'transform translate-x-full'}`}
         >

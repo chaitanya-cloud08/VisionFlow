@@ -107,33 +107,34 @@ const handleGoToHomepage=()=>
   
   return (
     <div className='backdrop-blur-3xl bg-gradient-to-r from-violet-400 to-pink-300 flex flex-col h-screen border-none shadow-lg overflow-hidden' style={{ backgroundImage: bgImage, backgroundSize: 'cover', backgroundPosition: 'center' }} > 
-    <div className='top w-full h-32 flex items-center justify-between p-0.5 '>
+      <div className='top w-full h-32 flex flex-col md:flex-row items-center justify-between p-0.5'>
       <div className='logo pl-4'>
         <h1 className='font-lobster text-white text-4xl cursor-pointer' onClick={handleGoToHomepage}>VisionFlow</h1>
       </div>
      
     </div>
-    <div className='flex-grow flex flex-row' style={{ height: 'calc(100vh - 16rem)' }}>
-        <div className='music-frame-wrapper flex items-end justify-center h-full w-3/12 mb-0'>
+    <div className='flex-grow flex flex-col md:flex-row' style={{ height: 'calc(100vh - 16rem)' }}>
+        <div className='music-frame-wrapper flex items-end justify-center w-full h-3/12 md:h-full md:w-3/12 -mt-24 md:mb-0'>
           {isIframeVisible && (
             <div id="embed-iframe">
               <SpotifyPlayer />
             </div>
           )}
         </div>
-        <div className='bg-wrapper flex flex-col items-enter justify-center  w-2/4 h-3/4 p-0 mt-12'>
-        <div className='calendar-container  flex items-center justify-center'>
-        <div className="blur-container backdrop-blur-sm p-0 rounded-2xl mb-10  ">
+        <div className='bg-wrapper flex flex-row md:flex-col items-center justify-center w-full h-full md:w-2/4 md:h-3/4 p-0 -mt-8 md:mt-12'>
+        <div className={`calendar-container flex items-center justify-center ${
+          isTodoVisible ? "hidden" : "block"} md:block`}>
+        <div className="blur-container backdrop-blur-none md:backdrop-blur-sm  w-full p-0 rounded-2xl mb-0 md:mb-10  ">
         <Calendar/></div></div>
         </div>
 
        
 
-<div className='todo-window w-3/12 h-full flex items-start justify-center'>
+<div className='todo-window h-3/12  w-full md:w-3/12 -mt-80 md:mt-0 md:pl-10 md:h-full flex md:flex-col items-start justify-center'>
 
           {isTodoVisible && ( 
-            <div className='todo-container bg-inerit w-3/4 h-2/4 mt-5 flex flex-col items-center justify-start'>
-           <div className="blur-container backdrop-blur-sm p-4 rounded-2xl ">
+            <div className='todo-container bg-inerit w-3/4 h-2/4 mt-2 md:-mt-10 flex flex-row md:flex-col items-center justify-start'>
+           <div className="blur-container backdrop-blur-none md:backdrop-blur-sm p-0 md:p-4 rounded-2xl ">
               <h1 className='text-white font-lobster text-xl text-center p-2'>Tasks for the day:</h1>
             <div className='flex flew-row'>
               <input className='bg-inherit focus:outline-none placeholder-white text-white ' placeholder='Enter your tasks...' type='text' value={newTask}  onChange={(e) => setNewTask(e.target.value)}/>
@@ -145,7 +146,7 @@ const handleGoToHomepage=()=>
         </button>
         </div>
          {/* Task List */}
-      <ul className="w-full max-w-lg space-y-3">
+      <ul className="w-full max-w-screen-sm space-y-3 flex flex-col ">
         {tasks.length > 0 ? (
           tasks.map((task, index) => (
             <li
@@ -164,7 +165,7 @@ const handleGoToHomepage=()=>
               </span>
               <button
                 onClick={() => removeTask(index)}
-                className="text-red-500 hover:text-red-700"
+                className="text-red-500 hover:text-red-700 ml-4"
               >
                 Remove
               </button>
