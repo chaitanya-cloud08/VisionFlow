@@ -90,7 +90,7 @@ export default function Dashboard() {
 
 
 
-<div className='bg-wrapper flex flex-col md:flex-row items-center justify-center h-full w-full md:w-2/4 md:h-full p-0  md:-ml-20 '>
+<div className='bg-wrapper flex flex-col md:flex-row items-center justify-center  h-full w-full md:w-2/4 md:h-full p-0  md:ml-96 md:mt-24 '>
         <div className="blur-container backdrop-blur-sm p-4 rounded-3xl ">
 
 
